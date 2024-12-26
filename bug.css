@@ -1,0 +1,12 @@
+This bug occurs when using Tailwind CSS's `@apply` directive with a class that has a complex selector, such as a pseudo-class or a media query.  The `@apply` directive will not correctly apply the styles defined in the referenced class. For example:
+
+```css
+/* styles.css */
+.hover\:bg-red-500 { @apply bg-red-500; }
+```
+
+```html
+<button class="hover\:bg-red-500">Hover me</button>
+```
+
+This code will not correctly change the background color to red on hover.
