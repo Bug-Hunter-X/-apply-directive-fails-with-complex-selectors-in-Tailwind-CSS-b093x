@@ -1,0 +1,10 @@
+The solution is to avoid using `@apply` with complex selectors. Instead, define the styles directly in the class that uses the complex selector. For example:
+
+```css
+/* bugSolution.css */
+button:hover {  
+  @apply bg-red-500; 
+}
+```
+
+This will correctly change the background color to red on hover.  Alternatively, for more complex scenarios, consider using utility-first approach instead of relying solely on `@apply` for complex selectors.
